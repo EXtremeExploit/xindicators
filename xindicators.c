@@ -7,6 +7,7 @@
 // clang-format off
 // Order is indicator(name, mask)
 #define INDICATOR_LIST(indicator)  \
+	indicator(raw, 0xffffffff)     \
 	indicator(caps_lock, 1 << 0)   \
 	indicator(num_lock, 1 << 1)    \
 	indicator(scroll_lock, 1 << 2) \
