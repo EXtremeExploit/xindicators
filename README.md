@@ -18,6 +18,7 @@
 * `xindicators.shift_lock()`
 * `xindicators.group_2()`
 * `xindicators.mouse_keys()`
+* `xindicators.raw()`
 
 # Example
 ```lua
