@@ -1,8 +1,8 @@
 package = "xindicators"
-version = "1.1-1"
+version = "2.0-1"
 source = {
 	url = "git://github.com/EXtremeExploit/xindicators",
-	tag = "v1.1"
+	tag = "v2.0"
 }
 description = {
 	summary = "Get XKB indicators in lua",
