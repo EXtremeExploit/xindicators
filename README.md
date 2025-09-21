@@ -18,12 +18,12 @@
 * `xindicators.shift_lock()`
 * `xindicators.group_2()`
 * `xindicators.mouse_keys()`
-* `xindicators.raw()`
+* `xindicators.raw()` // Used to get all of the above at the same time in the form of a bitfield
 
 # Example
 ```lua
 xi = require("xindicators")
 
-isActive = xi.caps_lock() -- Returns the current active state of caps lock (boolean)
-print(isActive)
+caps_lock_state = xi.caps_lock()
+print(caps_lock_state) -- Prints the current active state of caps lock (0 = inactive, any other number = active)
 ```
