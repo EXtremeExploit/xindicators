@@ -1,4 +1,3 @@
-#include <stdbool.h>
 #include <stdlib.h>
 #include <lua.h>
 #include <lauxlib.h>
@@ -28,19 +27,19 @@
 	static int(indicator)(lua_State * L) {                                     \
 		Display* display = XOpenDisplay(getenv("DISPLAY"));                    \
 		if (!display) {                                                        \
-			lua_pushboolean(L, 0);                                             \
+			lua_pushinteger(L, 0);                                             \
 			return 1;                                                          \
 		}                                                                      \
                                                                                \
 		unsigned int state = 0;                                                \
 		if (XkbGetIndicatorState(display, XkbUseCoreKbd, &state) != Success) { \
-			lua_pushboolean(L, 0);                                             \
+			lua_pushinteger(L, 0);                                             \
 			return 1;                                                          \
 		}                                                                      \
                                                                                \
 		XCloseDisplay(display);                                                \
 		state = state & ((mask));                                              \
-		lua_pushboolean(L, state);                                             \
+		lua_pushinteger(L, state);                                             \
 		return 1;                                                              \
 	}
 INDICATOR_LIST(GET_INDICATOR_FUNC)
